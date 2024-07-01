@@ -27,7 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
         passwordController.text,
       )
           .then((value) {
+        // ignore: use_build_context_synchronously
         Navigator.pop(context);
+        Navigator.pushReplacementNamed(context, AppRoutes.home);
       });
     }
   }

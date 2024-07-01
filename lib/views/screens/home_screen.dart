@@ -1,5 +1,6 @@
 import 'package:auth_firebase_service/controllers/auth_controller.dart';
 import 'package:auth_firebase_service/utils/messages.dart';
+import 'package:auth_firebase_service/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,8 +14,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   void onTapLogOut() {
     Messages.showLoadingDialog(context);
-    Provider.of<AuthController>(context, listen: false).logOut();
-    Navigator.pop(context);
+    Provider.of<AuthController>(
+      context,
+      listen: false,
+    ).logOut().then((value) {
+      Navigator.pop(context);
+      Navigator.pushReplacementNamed(context, AppRoutes.login);
+    });
   }
 
   @override
