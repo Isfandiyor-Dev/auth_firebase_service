@@ -87,7 +87,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       Padding(
                         padding: const EdgeInsets.all(10),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, AppRoutes.forgotPw);
+                          },
                           child: Text(
                             "Forgot password?",
                             style: TextStyle(
