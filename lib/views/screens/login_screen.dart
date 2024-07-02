@@ -27,9 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
         passwordController.text,
       )
           .then((value) {
-        // ignore: use_build_context_synchronously
         Navigator.pop(context);
-        Navigator.pushReplacementNamed(context, AppRoutes.home);
       });
     }
   }
@@ -172,7 +170,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.pushReplacementNamed(
+                          Navigator.pushNamed(
                             context,
                             AppRoutes.register,
                           );
