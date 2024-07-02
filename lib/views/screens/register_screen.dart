@@ -32,7 +32,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
         // ignore: use_build_context_synchronously
         Navigator.pop(context);
         Navigator.pushReplacementNamed(
-          // ignore: use_build_context_synchronously
           context,
           AppRoutes.home,
         );

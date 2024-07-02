@@ -22,7 +22,7 @@ class ForgotPassword extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 40,
+          horizontal: 20,
           vertical: 40,
         ),
         child: Form(
@@ -36,6 +36,7 @@ class ForgotPassword extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
+              SizedBox(height: 20),
               MyTextFiled(
                 textController: emailController,
                 hintText: "Email",
@@ -46,6 +47,23 @@ class ForgotPassword extends StatelessWidget {
                   return null;
                 },
                 keyboardType: TextInputType.emailAddress,
+              ),
+              SizedBox(height: 20),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  style: FilledButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    fixedSize: const Size.fromHeight(65),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                  onPressed: () {
+                    return resetPassoword();
+                  },
+                  child: const Text("Reset Password"),
+                ),
               ),
             ],
           ),

@@ -30,6 +30,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primaryFixedDim,
       appBar: AppBar(
+        leading: SizedBox(),
         backgroundColor: Colors.transparent,
         actions: [
           IconButton(
